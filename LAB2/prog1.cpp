@@ -4,7 +4,6 @@
 int main()
 {
     int i, a, n=6; //defined vars => shared among threads
-    
     omp_set_num_threads(4); // Set number of threads to 4
    
     #pragma omp parallel for 
