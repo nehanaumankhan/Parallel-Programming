@@ -9,7 +9,7 @@ int i, n = 8;
             printf("Thread %d loop i=%d\n", omp_get_thread_num(), i);
         }
         // This may print before other threads finish the loop
-        printf("Thread %d after loop\n", omp_get_thread_num());
+        printf("[Outside NoWait Region] Thread %d after loop\n", omp_get_thread_num());
     }
 return 0;
 }

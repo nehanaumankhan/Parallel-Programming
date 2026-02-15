@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <omp.h>
 int main() {
-    int i, n = 6;
-    int a = -1;
+    int i, n = 6, a = 0;
     #pragma omp parallel for private(i) lastprivate(a) 
         for (i = 0; i < n; i++) {
             a = i + 1;

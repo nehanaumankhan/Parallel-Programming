@@ -3,8 +3,7 @@
 #include <stdio.h>
 int main()
 {
-    int i, n= 6, a;
-    omp_set_num_threads(6);  
+    int i, n= 6, a;  
     #pragma omp parallel for private(i,a)
         for (i=0; i<n; i++)
         { 

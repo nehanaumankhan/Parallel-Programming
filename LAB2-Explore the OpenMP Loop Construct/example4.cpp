@@ -1,13 +1,10 @@
 #include <stdio.h>
 #include <omp.h>
-
 int main() 
 {
-    int i, n = 6, sum = 0;
+    int i, n = 10, sum = 0;
         #pragma omp parallel for default(shared) private(i)
-        for (i = 0; i < n; i++) {
-            sum += i;
-        }
+        for (i = 0; i < n; i++) sum += i;
         printf("sum=%d (may be wrong due to race)\n", sum);
 return 0;
 }

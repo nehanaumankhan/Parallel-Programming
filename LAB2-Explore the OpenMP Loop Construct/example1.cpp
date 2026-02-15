@@ -3,7 +3,6 @@
 int main()
 {
     int i, n=6; //initialized = shared; only defined = private 
-    omp_set_num_threads(6);
     #pragma omp parallel shared(n) private(i)
     {
         #pragma omp for

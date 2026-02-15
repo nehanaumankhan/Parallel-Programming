@@ -4,7 +4,6 @@
 int main()
 {
     int i, n= 6, a[6] = {1, 1, 1, 1, 1, 1};
-    omp_set_num_threads(6);  
     #pragma omp parallel for shared(a)
         for (i=0; i<n; i++)
         {
